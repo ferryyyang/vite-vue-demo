@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import calendarModule from './modules/calendar'
 
 // 使用 Vuex 插件
 Vue.use(Vuex)
@@ -134,7 +135,8 @@ const mapModule = {
 // 创建 Vuex Store 实例
 const store = new Vuex.Store({
   modules: {
-    map: mapModule
+    map: mapModule,
+    calendar: calendarModule
   },
   strict: process.env.NODE_ENV !== 'production' // 生产环境关闭严格模式
 })

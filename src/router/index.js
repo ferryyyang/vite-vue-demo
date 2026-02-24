@@ -8,6 +8,9 @@ const MapIndex = () => import('@/views/map/MapIndex.vue')
 const MapDetail = () => import('@/views/map/MapDetail.vue')
 const UserIndex = () => import('@/views/user/UserIndex.vue')
 const UserSettings = () => import('@/views/user/UserSettings.vue')
+const CalendarIndex = () => import('@/views/calendar/CalendarIndex.vue')
+const CalendarMonth = () => import('@/views/calendar/CalendarMonth.vue')
+const TestCalendar = () => import('@/views/calendar/TestCalendar.vue')
 const NotFound = () => import('@/views/error/NotFound.vue')
 const ServerError = () => import('@/views/error/ServerError.vue')
 
@@ -63,6 +66,34 @@ const routes = [
     }
   },
   {
+    path: '/calendar',
+    name: 'CalendarIndex',
+    component: CalendarIndex,
+    meta: {
+      title: '日历概览',
+      module: 'calendar'
+    }
+  },
+  {
+    path: '/calendar/month/:month',
+    name: 'CalendarMonth',
+    component: CalendarMonth,
+    props: true,
+    meta: {
+      title: '月份详情',
+      module: 'calendar'
+    }
+  },
+  {
+    path: '/calendar/test',
+    name: 'TestCalendar',
+    component: TestCalendar,
+    meta: {
+      title: '日历测试',
+      module: 'calendar'
+    }
+  },
+  {
     path: '/sass',
     name: 'SassDemo',
     component: SassDemo,
@@ -84,6 +115,7 @@ const routes = [
   { path: '/home', redirect: '/' },
   { path: '/map/index', redirect: '/map' },
   { path: '/user/index', redirect: '/user' },
+  { path: '/calendar/index', redirect: '/calendar' },
   // 404 页面必须放在最后
   {
     path: '*',

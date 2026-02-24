@@ -20,7 +20,8 @@
           active-text-color="#ffd04b">
           <el-menu-item index="1">首页</el-menu-item>
           <el-menu-item index="2">地图详情</el-menu-item>
-          <el-menu-item index="3">用户中心</el-menu-item>
+          <el-menu-item index="3">日历</el-menu-item>
+          <el-menu-item index="4">用户中心</el-menu-item>
         </el-menu>
       </div>
     </el-header>
@@ -36,7 +37,7 @@
         <!-- 底部页脚 -->
         <el-footer class="app-footer">
           <div class="footer-content">
-            <p>&copy; 2024 地图演示系统. 基于 Vite + Vue2 + Element UI + Leaflet 构建.</p>
+            <p>&copy; 2026 地图演示系统. 基于 Vite + Vue2 + Element UI + Leaflet 构建.</p>
             <div class="footer-links">
               <el-link type="info" href="#">关于我们</el-link>
               <el-link type="info" href="#">联系我们</el-link>
@@ -68,6 +69,9 @@ export default {
           this.$router.push('/map');
           break;
         case '3':
+          this.$router.push('/calendar');
+          break;
+        case '4':
           this.$router.push('/user');
           break;
       }
@@ -80,8 +84,10 @@ export default {
         this.activeIndex = '1';
       } else if (to.path === '/map') {
         this.activeIndex = '2';
-      } else if (to.path === '/user') {
+      } else if (to.path.startsWith('/calendar')) {
         this.activeIndex = '3';
+      } else if (to.path === '/user') {
+        this.activeIndex = '4';
       }
     }
   }

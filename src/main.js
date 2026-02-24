@@ -11,6 +11,13 @@ import 'element-ui/lib/theme-chalk/index.css'
 import './styles/global.css'
 // import './styles/variables.scss'
 
+// Use v-calendar & v-date-picker components
+import VCalendar from 'v-calendar';
+Vue.use(VCalendar, {
+  // componentPrefix: 'vc',  // Use <vc-calendar /> instead of <v-calendar />
+  // ...,                // ...other defaults
+});
+
 // 使用 Element UI
 Vue.use(ElementUI)
 
