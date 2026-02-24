@@ -11,6 +11,8 @@ const UserSettings = () => import('@/views/user/UserSettings.vue')
 const CalendarIndex = () => import('@/views/calendar/CalendarIndex.vue')
 const CalendarMonth = () => import('@/views/calendar/CalendarMonth.vue')
 const TestCalendar = () => import('@/views/calendar/TestCalendar.vue')
+const ApiExample = () => import('@/views/calendar/ApiExample.vue')
+const CrossDomainTest = () => import('@/views/calendar/CrossDomainTest.vue')
 const NotFound = () => import('@/views/error/NotFound.vue')
 const ServerError = () => import('@/views/error/ServerError.vue')
 
@@ -90,6 +92,15 @@ const routes = [
     component: TestCalendar,
     meta: {
       title: '日历测试',
+      module: 'calendar'
+    }
+  },
+  {
+    path: '/calendar/api',
+    name: 'ApiExample',
+    component: ApiExample,
+    meta: {
+      title: 'Axios 示例',
       module: 'calendar'
     }
   },

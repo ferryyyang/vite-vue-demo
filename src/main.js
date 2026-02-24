@@ -7,6 +7,9 @@ import store from './store'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
+// 导入 axios 配置
+import axios from './apis/axios'
+
 // 引入全局样式文件
 import './styles/global.css'
 // import './styles/variables.scss'
@@ -20,6 +23,10 @@ Vue.use(VCalendar, {
 
 // 使用 Element UI
 Vue.use(ElementUI)
+
+// 全局注册 axios
+Vue.prototype.$http = axios
+Vue.prototype.axios = axios
 
 // 创建 Vue 实例
 new Vue({
