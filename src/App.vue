@@ -183,7 +183,7 @@ export default {
 .app-main {
   background-color: #f5f5f5;
   padding: 20px;
-  min-height: calc(100vh - 180px); /* 减去头部和页脚高度 */
+  height: calc(100vh - 180px); /* 减去头部和页脚高度 */
 }
 
 .app-footer {

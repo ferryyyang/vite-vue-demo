@@ -12,7 +12,9 @@ const CalendarIndex = () => import('@/views/calendar/CalendarIndex.vue')
 const CalendarMonth = () => import('@/views/calendar/CalendarMonth.vue')
 const TestCalendar = () => import('@/views/calendar/TestCalendar.vue')
 const ApiExample = () => import('@/views/calendar/ApiExample.vue')
-const CrossDomainTest = () => import('@/views/calendar/CrossDomainTest.vue')
+// const CrossDomainTest = () => import('@/views/calendar/CrossDomainTest.vue') // 文件不存在，已注释
+const CodePreview = () => import('@/views/code-preview/CodePreview.vue')
+const ExamplesIndex = () => import('@/views/examples/ExamplesIndex.vue')
 const NotFound = () => import('@/views/error/NotFound.vue')
 const ServerError = () => import('@/views/error/ServerError.vue')
 
@@ -109,8 +111,26 @@ const routes = [
     name: 'SassDemo',
     component: SassDemo,
     meta: {
-      title: 'Sass演示',
+      title: 'Sass 演示',
       module: 'home'
+    }
+  },
+  {
+    path: '/code-preview',
+    name: 'CodePreview',
+    component: CodePreview,
+    meta: {
+      title: '代码实时预览',
+      module: 'code-preview'
+    }
+  },
+  {
+    path: '/examples',
+    name: 'ExamplesIndex',
+    component: ExamplesIndex,
+    meta: {
+      title: '功能示例',
+      module: 'examples'
     }
   },
   {
